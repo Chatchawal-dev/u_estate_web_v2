@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "export NODE_OPTIONS=--openssl-legacy-provider && next dev",
+    "start": "export SET NODE_OPTIONS=--openssl-legacy-provider && next start",
+    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && next build",
     "lint": "next lint"
   },
   "dependencies": {
@@ -20,7 +20,8 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-horizontal-scrolling-menu": "^2.3.2",
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.2.0",
+    "sharp": "^0.32.6"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
